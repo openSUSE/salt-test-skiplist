@@ -1,9 +1,14 @@
 [ignore]
 unit = [
+	"tests/pytests/unit/modules/test_zfs.py",
+	"tests/pytests/unit/modules/test_zfs_solaris10.py",
+	"tests/pytests/unit/modules/test_zfs_solaris11.py",
+	"tests/pytests/unit/states/test_zfs.py",
 	"tests/unit/modules/test_boto3_elasticsearch.py",
 	"tests/unit/modules/test_boto3_route53.py",
 	"tests/unit/modules/test_boto_route53.py",
 	"tests/unit/utils/test_boto3mod.py",
+	"tests/unit/utils/test_zfs.py",
 ]
 integration = [
 ]
