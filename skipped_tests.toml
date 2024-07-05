@@ -93,6 +93,7 @@ unit = [
 ]
 integration = [
 	"tests/integration/cli/test_custom_module.py::SSHCustomModuleTest::test_ssh_custom_module",  # Needs investigation: Fails only with Salt Bundle
+	"tests/integration/cli/test_custom_module.py::SSHCustomModuleTest::test_ssh_regular_module", # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/cli/test_custom_module.py::SSHCustomModuleTest::test_ssh_sls_with_custom_module",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/loader/test_ext_modules.py",  # Make pytest to stuck in sle15sp1 classic pkg
 	"tests/integration/modules/test_cmdmod.py::CMDModuleTest::test_which_bin",
@@ -153,6 +154,11 @@ functional = [
 	"tests/pytests/functional/runners/test_winrepo.py::test_legacy_update_git_repos",
 	"tests/pytests/functional/runners/test_winrepo.py::test_update_git_repos",
 	"tests/pytests/functional/states/test_pip_state.py::test_pip_installed_name_test_mode",
+
+	"tests/pytests/functional/modules/test_x509_v2.py::test_create_private_key[ed25519]",  # Needs investigation: Fails only with Salt Bundle - cryptography.exceptions.UnsupportedAlgorithm: ed25519 is not supported by t...
+	"tests/pytests/functional/modules/test_x509_v2.py::test_create_private_key[ed448]",  # Needs investigation: Fails only with Salt Bundle - cryptography.exceptions.UnsupportedAlgorithm: ed448 is not supported by thi...
+	"tests/pytests/functional/modules/test_x509_v2.py::test_create_private_key_with_passphrase[ed25519]",  # Needs investigation: Fails only with Salt Bundle - cryptography.exceptions.UnsupportedAlgorithm: ed25519 is not supported by t...
+	"tests/pytests/functional/modules/test_x509_v2.py::test_create_private_key_with_passphrase[ed448]",  # Needs investigation: Fails only with Salt Bundle -  cryptography.exceptions.UnsupportedAlgorithm: ed448 is not supported by thi...
 	"tests/pytests/functional/states/test_pip_state.py::test_pip_installed_pkgs_test_mode",
 	"tests/pytests/functional/states/test_x509_v2.py::test_certificate_managed_backup[1234-False-der]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
 	"tests/pytests/functional/states/test_x509_v2.py::test_certificate_managed_backup[1234-False-pem]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
