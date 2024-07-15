@@ -81,16 +81,16 @@ unit = [
 #	"tests/unit/transport/test_ipc.py::IPCMessagePubSubCase::test_async_reading_streamclosederror",
 	# Upstream removed vendored Tornado in https://github.com/saltstack/salt/commit/4baea1a97be0389fabe5307d084579134a1f9b7a
 	"tests/unit/transport/test_ipc.py::IPCMessagePubSubCase::test_multi_client_reading",
-	"tests/unit/utils/test_sdb.py::SdbTestCase::test_sqlite_get_found",
-	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_evaluate",
-	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_evaluate_condition",
-	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_sanity",
-	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_variable",
-	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_variable_replace",
-	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_mako_evaluate",
-	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_mako_evaluate_multi",
-	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_mako_sanity",
-	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_mako_variable",
+#	"tests/unit/utils/test_sdb.py::SdbTestCase::test_sqlite_get_found",
+#	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_evaluate",
+#	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_evaluate_condition",
+#	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_sanity",
+#	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_variable",
+#	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_variable_replace",
+#	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_mako_evaluate",
+#	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_mako_evaluate_multi",
+#	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_mako_sanity",
+#	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_mako_variable",
 ]
 integration = [
 	"tests/integration/cli/test_custom_module.py::SSHCustomModuleTest::test_ssh_custom_module",  # Needs investigation: Fails only with Salt Bundle
