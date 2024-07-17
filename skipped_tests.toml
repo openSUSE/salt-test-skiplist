@@ -52,7 +52,7 @@ unit = [
 #	"tests/pytests/unit/modules/test_pip.py::test_install_venv",
 #	"tests/pytests/unit/modules/test_pip.py::test_install_with_multiple_find_links",
 #	"tests/pytests/unit/modules/test_pip.py::test_issue5940_install_multiple_pip_mirrors",
-	"tests/pytests/unit/modules/test_rpm_lowpkg.py::test_version_cmp_rpm_all_libraries[HAS_RPM]",
+#	"tests/pytests/unit/modules/test_rpm_lowpkg.py::test_version_cmp_rpm_all_libraries[HAS_RPM]",
 #	"tests/pytests/unit/modules/test_transactional_update.py::test_call_fails_function",
 #	"tests/pytests/unit/modules/test_transactional_update.py::test_call_success_no_reboot",
 #	"tests/pytests/unit/modules/test_transactional_update.py::test_call_success_parameters",
@@ -62,7 +62,7 @@ unit = [
 	"tests/pytests/unit/states/test_pkgrepo.py::test_migrated_wrong_method",
 #	"tests/pytests/unit/test_fileserver.py::test_file_server_url_escape",  # Needs investigation: Fails only with Salt Bundle
 #	"tests/pytests/unit/utils/test_gitfs.py::test_full_id_pygit2",
-#	"tests/pytests/unit/utils/test_msgpack.py::test_load_encoding",
+	"tests/pytests/unit/utils/test_msgpack.py::test_load_encoding",
 	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[blowfish-expected2]",
 	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[crypt-expected4]",
 	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[md5-expected3]",
