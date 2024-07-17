@@ -13,9 +13,9 @@ unit = [
 	"tests/unit/modules/test_x509.py::X509TestCase::test_create_crl",  # Needs investigation: Fails only with Salt Bundle
 	"tests/unit/modules/test_x509.py::X509TestCase::test_revoke_certificate_with_crl",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/unit/grains/test_core.py::test_get_server_id",
-	"tests/pytests/unit/_logging/handlers/test_deferred_stream_handler.py::test_deferred_write_on_flush",
-	"tests/pytests/unit/_logging/handlers/test_deferred_stream_handler.py::test_sync_with_handlers",
-	"tests/pytests/unit/modules/file/test_file_module.py::test_check_file_meta_binary_contents",
+#	"tests/pytests/unit/_logging/handlers/test_deferred_stream_handler.py::test_deferred_write_on_flush",
+#	"tests/pytests/unit/_logging/handlers/test_deferred_stream_handler.py::test_sync_with_handlers",
+#	"tests/pytests/unit/modules/file/test_file_module.py::test_check_file_meta_binary_contents",
 	"tests/pytests/unit/modules/test_linux_shadow.py::test_gen_password[md5-passlib]",
 	"tests/pytests/unit/modules/test_linux_shadow.py::test_gen_password[sha256-passlib]",
 	"tests/pytests/unit/modules/test_linux_shadow.py::test_gen_password[sha512-passlib]",
