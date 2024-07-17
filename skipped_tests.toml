@@ -16,6 +16,7 @@ unit = [
 #	"tests/pytests/unit/_logging/handlers/test_deferred_stream_handler.py::test_deferred_write_on_flush",
 #	"tests/pytests/unit/_logging/handlers/test_deferred_stream_handler.py::test_sync_with_handlers",
 #	"tests/pytests/unit/modules/file/test_file_module.py::test_check_file_meta_binary_contents",
+#       Salt bundle currently doesn't package/ship passlib
 	"tests/pytests/unit/modules/test_linux_shadow.py::test_gen_password[md5-passlib]",
 	"tests/pytests/unit/modules/test_linux_shadow.py::test_gen_password[sha256-passlib]",
 	"tests/pytests/unit/modules/test_linux_shadow.py::test_gen_password[sha512-passlib]",
