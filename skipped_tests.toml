@@ -63,7 +63,8 @@ unit = [
 #	"tests/pytests/unit/test_fileserver.py::test_file_server_url_escape",  # Needs investigation: Fails only with Salt Bundle
 #	"tests/pytests/unit/utils/test_gitfs.py::test_full_id_pygit2",
 #	"tests/pytests/unit/utils/test_msgpack.py::test_load_encoding",
-#	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[blowfish-expected2]",
+#       Requires Python 3.7. Non-bundle client uses Python 3.6, which doesn't have blowfish algorithm
+	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[blowfish-expected2]",
 #	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[crypt-expected4]",
 #	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[md5-expected3]",
 #	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[sha256-expected1]",
