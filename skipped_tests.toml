@@ -111,16 +111,16 @@ integration = [
 	"tests/integration/modules/test_tls.py::TLSModuleTest::test_with_existing_ca_signing_csr_should_produce_valid_cert",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/states/test_x509.py::x509Test::test_crl_managed",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'X509_CRL_set1_lastUpdate'
 	"tests/integration/states/test_x509.py::x509Test::test_crl_managed_replacing_existing_crl",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'X509_CRL_set1_lastUpdate'
-	"tests/pytests/integration/master/test_clear_funcs.py::test_clearfuncs_config",
-	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_read",
-	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_write",
-	"tests/pytests/integration/netapi/rest_tornado/test_minions_api_handler.py::test_get_no_mid",
-	"tests/pytests/integration/netapi/rest_tornado/test_root_handler.py::test_simple_local_post",
-	"tests/pytests/integration/netapi/rest_tornado/test_root_handler.py::test_simple_local_post_only_dictionary_request",
-	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_jid_in_ret_event",
-	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_orchestration_with_pillar_dot_items",
-	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_parallel_orchestrations",
-	"tests/pytests/integration/states/test_x509_v2.py::test_certificate_managed_remote_ca_cert_change[existing_cert0]",  # Needs investigation: Fails only with Salt Bundle
+#	"tests/pytests/integration/master/test_clear_funcs.py::test_clearfuncs_config",
+#	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_read",
+#	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_write",
+#	"tests/pytests/integration/netapi/rest_tornado/test_minions_api_handler.py::test_get_no_mid",
+#	"tests/pytests/integration/netapi/rest_tornado/test_root_handler.py::test_simple_local_post",
+#	"tests/pytests/integration/netapi/rest_tornado/test_root_handler.py::test_simple_local_post_only_dictionary_request",
+#	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_jid_in_ret_event",
+#	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_orchestration_with_pillar_dot_items",
+#	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_parallel_orchestrations",
+#	"tests/pytests/integration/states/test_x509_v2.py::test_certificate_managed_remote_ca_cert_change[existing_cert0]",  # Needs investigation: Fails only with Salt Bundle
 ]
 functional = [
 	"tests/pytests/functional/channel/test_server.py::test_pub_server_channel[transport(zeromq)]",
