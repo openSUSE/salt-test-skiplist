@@ -98,7 +98,7 @@ integration = [
 	"tests/integration/cli/test_custom_module.py::SSHCustomModuleTest::test_ssh_custom_module",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/cli/test_custom_module.py::SSHCustomModuleTest::test_ssh_sls_with_custom_module",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/loader/test_ext_modules.py",  # Make pytest to stuck in sle15sp1 classic pkg
-	"tests/integration/modules/test_cmdmod.py::CMDModuleTest::test_which_bin",
+#	"tests/integration/modules/test_cmdmod.py::CMDModuleTest::test_which_bin",
 	"tests/integration/modules/test_pip.py::PipModuleTest::test_chained_requirements__non_absolute_file_path",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/modules/test_pip.py::PipModuleTest::test_issue_2087_missing_pip",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/modules/test_pip.py::PipModuleTest::test_issue_4805_nested_requirements",  # Needs investigation: Fails only with Salt Bundle
