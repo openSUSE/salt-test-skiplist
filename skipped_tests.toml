@@ -202,7 +202,8 @@ functional = [
 #	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_good_yaml",
 #	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_has_yamllint",
 #	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_input_bytes",
-#	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_version",
+        # We use python3-yamllint-1.22.1-150500.3.5.1.noarch, upstream hardcodes version 1.26.3 or greater
+	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_version",
 ]
 scenarios = [
 	"tests/pytests/scenarios/blackout/test_minion_blackout.py::test_blackout",
