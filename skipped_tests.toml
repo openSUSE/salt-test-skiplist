@@ -127,9 +127,9 @@ functional = [
 	"tests/pytests/functional/modules/test_dockermod.py::test_docker_call",  # Needs investigation: Fails only with Salt Bundle - salt.exceptions.CommandExecutionError: /var/tmp/venv-salt-minion/bin/python.original: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.38' not found (required by /var/tmp/venv-salt-min...
 	"tests/pytests/functional/modules/test_dockermod.py::test_docker_highstate",  # Needs investigation: Fails only with Salt Bundle - salt.exceptions.CommandExecutionError: /var/tmp/venv-salt-minion/bin/python.original: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.38' not found (required by /var/tmp/venv-salt-min...
 	"tests/pytests/functional/modules/test_dockermod.py::test_docker_sls",  # Needs investigation: Fails only with Salt Bundle - salt.exceptions.CommandExecutionError: /var/tmp/venv-salt-minion/bin/python.original: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.38' not found (required by /var/tmp/venv-salt-min...
-	"tests/pytests/functional/modules/test_sdb.py::test_setting_sdb_values_with_text_and_bytes_should_retain_data_types[bang]",
-	"tests/pytests/functional/modules/test_sdb.py::test_setting_sdb_values_with_text_and_bytes_should_retain_data_types[expected_value2]",
-	"tests/pytests/functional/modules/test_sdb.py::test_setting_sdb_values_with_text_and_bytes_should_retain_data_types[expected_value3]",
+#	"tests/pytests/functional/modules/test_sdb.py::test_setting_sdb_values_with_text_and_bytes_should_retain_data_types[bang]",
+#	"tests/pytests/functional/modules/test_sdb.py::test_setting_sdb_values_with_text_and_bytes_should_retain_data_types[expected_value2]",
+#	"tests/pytests/functional/modules/test_sdb.py::test_setting_sdb_values_with_text_and_bytes_should_retain_data_types[expected_value3]",
 #	"tests/pytests/functional/modules/test_x509_v2.py::test_create_certificate_from_privkey[ed25519]",
 #	"tests/pytests/functional/modules/test_x509_v2.py::test_create_certificate_from_privkey[ed448]",
 #	"tests/pytests/functional/modules/test_x509_v2.py::test_create_certificate_from_pubkey[ed25519]",
@@ -197,12 +197,12 @@ functional = [
 	"tests/pytests/functional/utils/pyinstaller/rthooks/test_subprocess.py::test_subprocess_popen_environ_cleanup_original[LD_LIBRARY_PATH]",
 	"tests/pytests/functional/utils/pyinstaller/rthooks/test_subprocess.py::test_subprocess_popen_environ_cleanup_original_passed_directly[LD_LIBRARY_PATH]",
 	"tests/pytests/functional/utils/pyinstaller/rthooks/test_subprocess.py::test_subprocess_popen_environ_cleanup_passed_directly_not_removed[LD_LIBRARY_PATH]",
-	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_bad_yaml",
-	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_config",
-	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_good_yaml",
-	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_has_yamllint",
-	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_input_bytes",
-	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_version",
+#	"tests/pytests/functional/utils/lint/test_yamllint.py::test_bad_yaml",
+#	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_config",
+#	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_good_yaml",
+#	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_has_yamllint",
+#	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_input_bytes",
+#	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_version",
 ]
 scenarios = [
 	"tests/pytests/scenarios/blackout/test_minion_blackout.py::test_blackout",
