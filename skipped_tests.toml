@@ -189,9 +189,10 @@ functional = [
 	"tests/pytests/functional/transport/ipc/test_pub_server_channel.py::test_publish_to_pubserv_ipc",  # Make pytest to hang during cleanup
 	"tests/pytests/functional/transport/tcp/test_message_client.py::test_message_client_reconnect",
 	"tests/pytests/functional/transport/zeromq/test_pub_server_channel.py::test_zeromq_filtering",  # Make pytest to hang on sle15sp1
-	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup[LD_LIBRARY_PATH]",
-	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup_original[LD_LIBRARY_PATH]",
-	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup_original_passed_directly[LD_LIBRARY_PATH]",
+#	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup[LD_LIBRARY_PATH]",
+#	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup_original[LD_LIBRARY_PATH]",
+#	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup_original_passed_directly[LD_LIBRARY_PATH]",
+        # Fails on venv-salt-bundle because the venv /usr/lib/venv-salt-minion/bin/python wrapper hardcodes LD_LIBRARY_PATH
 	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup_passed_directly_not_removed[LD_LIBRARY_PATH]",
 	"tests/pytests/functional/utils/pyinstaller/rthooks/test_subprocess.py::test_subprocess_popen_environ_cleanup[LD_LIBRARY_PATH]",
 	"tests/pytests/functional/utils/pyinstaller/rthooks/test_subprocess.py::test_subprocess_popen_environ_cleanup_original[LD_LIBRARY_PATH]",
