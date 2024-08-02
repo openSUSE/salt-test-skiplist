@@ -10,8 +10,6 @@ integration = [
 [skip]
 unit = [
 	"tests/pytests/unit/test_fileserver.py::test_file_server_serve_url_escape",  # Needs investigation: Fails only with Salt Bundle
-	"tests/unit/modules/test_x509.py::X509TestCase::test_create_crl",  # Needs investigation: Fails only with Salt Bundle
-	"tests/unit/modules/test_x509.py::X509TestCase::test_revoke_certificate_with_crl",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/unit/grains/test_core.py::test_get_server_id",
 	"tests/pytests/unit/_logging/handlers/test_deferred_stream_handler.py::test_deferred_write_on_flush",
 	"tests/pytests/unit/_logging/handlers/test_deferred_stream_handler.py::test_sync_with_handlers",
@@ -106,8 +104,6 @@ integration = [
 	"tests/integration/modules/test_tls.py::TLSModuleTest::test_revoked_cert_should_return_False_from_validate",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/modules/test_tls.py::TLSModuleTest::test_validating_revoked_cert_with_no_crl_file_should_return_False",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/modules/test_tls.py::TLSModuleTest::test_with_existing_ca_signing_csr_should_produce_valid_cert",  # Needs investigation: Fails only with Salt Bundle
-	"tests/integration/states/test_x509.py::x509Test::test_crl_managed",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'X509_CRL_set1_lastUpdate'
-	"tests/integration/states/test_x509.py::x509Test::test_crl_managed_replacing_existing_crl",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'X509_CRL_set1_lastUpdate'
 	# Tests related to pygit2 are failing for Classic Salt in Leap 15.5. This needs further research.
 	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_all_saltenvs_base",
 	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_base",
@@ -133,7 +129,6 @@ integration = [
 	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_jid_in_ret_event",
 	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_orchestration_with_pillar_dot_items",
 	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_parallel_orchestrations",
-	"tests/pytests/integration/states/test_x509_v2.py::test_certificate_managed_remote_ca_cert_change[existing_cert0]",  # Needs investigation: Fails only with Salt Bundle
 ]
 functional = [
 	"tests/pytests/functional/channel/test_server.py::test_pub_server_channel[transport(zeromq)]",
@@ -143,26 +138,6 @@ functional = [
 	"tests/pytests/functional/modules/test_sdb.py::test_setting_sdb_values_with_text_and_bytes_should_retain_data_types[bang]",
 	"tests/pytests/functional/modules/test_sdb.py::test_setting_sdb_values_with_text_and_bytes_should_retain_data_types[expected_value2]",
 	"tests/pytests/functional/modules/test_sdb.py::test_setting_sdb_values_with_text_and_bytes_should_retain_data_types[expected_value3]",
-	"tests/pytests/functional/modules/test_x509_v2.py::test_create_certificate_from_privkey[ed25519]",
-	"tests/pytests/functional/modules/test_x509_v2.py::test_create_certificate_from_privkey[ed448]",
-	"tests/pytests/functional/modules/test_x509_v2.py::test_create_certificate_from_pubkey[ed25519]",
-	"tests/pytests/functional/modules/test_x509_v2.py::test_create_certificate_from_pubkey[ed448]",
-	"tests/pytests/functional/modules/test_x509_v2.py::test_create_certificate_self_signed[ed25519]",
-	"tests/pytests/functional/modules/test_x509_v2.py::test_create_certificate_self_signed[ed448]",
-	"tests/pytests/functional/modules/test_x509_v2.py::test_create_csr[ed25519]",
-	"tests/pytests/functional/modules/test_x509_v2.py::test_create_csr[ed448]",
-	"tests/pytests/functional/modules/test_x509_v2.py::test_get_private_key_size[ed25519-None]",
-	"tests/pytests/functional/modules/test_x509_v2.py::test_get_private_key_size[ed448-None]",
-	"tests/pytests/functional/modules/test_x509_v2.py::test_get_public_key[cert_exts]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-	"tests/pytests/functional/modules/test_x509_v2.py::test_get_public_key[csr_exts]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-	"tests/pytests/functional/modules/test_x509_v2.py::test_get_public_key[rsa_privkey]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-	"tests/pytests/functional/modules/test_x509_v2.py::test_get_public_key_should_not_fail_with_removed_arg",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-	"tests/pytests/functional/modules/test_x509_v2.py::test_verify_crl",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-	"tests/pytests/functional/modules/test_x509_v2.py::test_verify_private_key",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-	"tests/pytests/functional/modules/test_x509_v2.py::test_verify_signature[ec]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-	"tests/pytests/functional/modules/test_x509_v2.py::test_verify_signature[ed25519]",
-	"tests/pytests/functional/modules/test_x509_v2.py::test_verify_signature[ed448]",
-	"tests/pytests/functional/modules/test_x509_v2.py::test_verify_signature[rsa]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
 	"tests/pytests/functional/modules/test_yaml.py::test_lint_pre_render",
 	"tests/pytests/functional/modules/test_yaml.py::test_lint_yaml",
 	"tests/pytests/functional/modules/test_yaml.py::test_yamllint_virtual",
@@ -170,34 +145,17 @@ functional = [
 	"tests/pytests/functional/runners/test_winrepo.py::test_update_git_repos",
 	"tests/pytests/functional/states/test_pip_state.py::test_pip_installed_name_test_mode",
 	"tests/pytests/functional/states/test_pip_state.py::test_pip_installed_pkgs_test_mode",
-	"tests/pytests/functional/states/test_x509_v2.py::test_certificate_managed_backup[1234-False-der]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
-	"tests/pytests/functional/states/test_x509_v2.py::test_certificate_managed_backup[1234-False-pem]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
-	"tests/pytests/functional/states/test_x509_v2.py::test_certificate_managed_backup[1234-minion-der]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
-	"tests/pytests/functional/states/test_x509_v2.py::test_certificate_managed_backup[1234-minion-pem]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
-	"tests/pytests/functional/states/test_x509_v2.py::test_certificate_managed_existing_not_a_cert[1234]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
-	"tests/pytests/functional/states/test_x509_v2.py::test_certificate_managed_signing_cert_change[existing_cert0]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
-	"tests/pytests/functional/states/test_x509_v2.py::test_crl_managed_existing_not_a_crl[1234]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
-	"tests/pytests/functional/states/test_x509_v2.py::test_crl_managed_existing_signing_key_change[existing_crl0]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
-	"tests/pytests/functional/states/test_x509_v2.py::test_csr_managed_existing_not_a_csr[1234]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_algo_change[existing_pk0]",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_existing[existing_pk2]",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_existing[existing_pk3]",  # Needs investigation: Fails only with Salt Bundle
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_existing_not_a_pk[1234-False]",  # Needs investigation: Fails only with Salt Bundle - assert 'does not seem to be a private key' in 'An exception occurred in this state: Traceback (most recent call last):\n  File "/usr/lib/venv-salt-minion/lib64/python3.11/site-packages/...
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_existing_not_a_pk[1234-True]",  # Needs investigation: Fails only with Salt Bundle - assert False == True
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-der-ec]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-der-ed25519]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-der-ed448]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-der-rsa]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-pem-ed25519]",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-pem-ed448]",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[None-der-ed25519]",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[None-der-ed448]",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[None-pem-ed25519]",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[None-pem-ed448]",  # Needs investigation: Fails only with Salt Bundle
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_passphrase_changed_not_overwrite[existing_pk0]",  # Needs investigation: Fails only with Salt Bundle - assert 'The provided passphrase cannot decrypt the private key. Pass overwrite' in 'An exception occurred in this state: Traceback (most recent call last):\n  File "/usr/lib/venv-salt-m...
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_passphrase_changed_overwrite[existing_pk0]",  # Needs investigation: Fails only with Salt Bundle - assert False
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_passphrase_removed_not_overwrite[existing_pk0]",  # Needs investigation: Fails only with Salt Bundle
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_passphrase_removed_overwrite[existing_pk0]",  # Needs investigation: Fails only with Salt Bundle - assert False
 	"tests/pytests/functional/transport/ipc/test_pub_server_channel.py::test_issue_36469_tcp",  # Make pytest to hang on sle15sp1
 	"tests/pytests/functional/transport/ipc/test_pub_server_channel.py::test_publish_to_pubserv_ipc",  # Make pytest to hang during cleanup
 	"tests/pytests/functional/transport/tcp/test_message_client.py::test_message_client_reconnect",
