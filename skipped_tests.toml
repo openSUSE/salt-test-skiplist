@@ -9,96 +9,27 @@ integration = [
 ]
 [skip]
 unit = [
-#	"tests/pytests/unit/test_fileserver.py::test_file_server_serve_url_escape",  # Needs investigation: Fails only with Salt Bundle
 	"tests/unit/modules/test_x509.py::X509TestCase::test_create_crl",  # Needs investigation: Fails only with Salt Bundle
 	"tests/unit/modules/test_x509.py::X509TestCase::test_revoke_certificate_with_crl",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/unit/grains/test_core.py::test_get_server_id",
-#	"tests/pytests/unit/_logging/handlers/test_deferred_stream_handler.py::test_deferred_write_on_flush",
-#	"tests/pytests/unit/_logging/handlers/test_deferred_stream_handler.py::test_sync_with_handlers",
-#	"tests/pytests/unit/modules/file/test_file_module.py::test_check_file_meta_binary_contents",
 #       Salt bundle currently doesn't package/ship passlib
 	"tests/pytests/unit/modules/test_linux_shadow.py::test_gen_password[md5-passlib]",
 	"tests/pytests/unit/modules/test_linux_shadow.py::test_gen_password[sha256-passlib]",
 	"tests/pytests/unit/modules/test_linux_shadow.py::test_gen_password[sha512-passlib]",
-#	"tests/pytests/unit/modules/test_pip.py::test_fix4361",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_build_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_cached_requirements_used",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_download_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_download_cache_dir_arguments_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_exists_action_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_extra_args_arguments_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_extra_index_url_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_force_reinstall_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_frozen_app",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_global_options_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_global_proxy_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_ignore_installed_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_index_url_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_install_options_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_log_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_multiple_editable",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_multiple_pkgs_and_editables",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_multiple_requirements_arguments_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_no_deps_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_no_download_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_no_index_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_no_install_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_pre_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_proxy_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_proxy_false_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_source_app",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_source_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_timeout_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_upgrade_argument_in_resulting_command",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_venv",
-#	"tests/pytests/unit/modules/test_pip.py::test_install_with_multiple_find_links",
-#	"tests/pytests/unit/modules/test_pip.py::test_issue5940_install_multiple_pip_mirrors",
 	"tests/pytests/unit/modules/test_rpm_lowpkg.py::test_version_cmp_rpm_all_libraries[HAS_RPM]",
-#	"tests/pytests/unit/modules/test_transactional_update.py::test_call_fails_function",
-#	"tests/pytests/unit/modules/test_transactional_update.py::test_call_success_no_reboot",
-#	"tests/pytests/unit/modules/test_transactional_update.py::test_call_success_parameters",
-#	"tests/pytests/unit/modules/test_transactional_update.py::test_call_success_reboot",
-#	"tests/pytests/unit/states/file/test_tidied.py::test_tidied_age_size_args_AND_operator_age_not_size",
-#	"tests/pytests/unit/states/file/test_tidied.py::test_tidied_age_size_args_AND_operator_size_not_age",
-#	"tests/pytests/unit/states/test_pkgrepo.py::test_migrated_wrong_method",
-#	"tests/pytests/unit/test_fileserver.py::test_file_server_url_escape",  # Needs investigation: Fails only with Salt Bundle
-#	"tests/pytests/unit/utils/test_gitfs.py::test_full_id_pygit2",
-#	"tests/pytests/unit/utils/test_msgpack.py::test_load_encoding",
 #       Requires Python 3.7. Non-bundle client uses Python 3.6, which doesn't have blowfish algorithm
 	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[blowfish-expected2]",
-#	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[crypt-expected4]",
-#	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[md5-expected3]",
-#	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[sha256-expected1]",
-#	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[sha512-expected0]",
-#	"tests/pytests/unit/utils/test_vt.py::test_log_sanitize[echo]",
-#	"tests/pytests/unit/utils/test_vt.py::test_log_sanitize[ls]",
 	"tests/unit/cli/test_support.py::ProfileIntegrityTestCase::test_jobs_trace_template_profile",
 	"tests/unit/cli/test_support.py::ProfileIntegrityTestCase::test_non_template_profiles_parseable",
 	"tests/unit/cli/test_support.py::ProfileIntegrityTestCase::test_users_template_profile",
 	"tests/unit/modules/test_dpkg_lowpkg.py::DpkgTestCase::test_info",
-#	"tests/unit/test_config.py::APIConfigTestCase::test_api_config_log_file_values",
-#	"tests/unit/test_config.py::APIConfigTestCase::test_api_config_prepend_root_dirs_return",
-#	"tests/unit/test_config.py::ConfigTestCase::test_load_minion_config_from_environ_var",
-#	"tests/unit/test_config.py::SampleConfTest::test_conf_master_sample_is_commented",
-#	"tests/unit/transport/test_ipc.py::IPCMessagePubSubCase::test_async_reading_streamclosederror",
 	# Upstream removed vendored Tornado in https://github.com/saltstack/salt/commit/4baea1a97be0389fabe5307d084579134a1f9b7a
 	"tests/unit/transport/test_ipc.py::IPCMessagePubSubCase::test_multi_client_reading",
-#	"tests/unit/utils/test_sdb.py::SdbTestCase::test_sqlite_get_found",
-#	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_evaluate",
-#	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_evaluate_condition",
-#	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_sanity",
-#	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_variable",
-#	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_variable_replace",
-#	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_mako_evaluate",
-#	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_mako_evaluate_multi",
-#	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_mako_sanity",
-#	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_mako_variable",
 ]
 integration = [
 	"tests/integration/cli/test_custom_module.py::SSHCustomModuleTest::test_ssh_custom_module",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/cli/test_custom_module.py::SSHCustomModuleTest::test_ssh_sls_with_custom_module",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/loader/test_ext_modules.py",  # Make pytest to stuck in sle15sp1 classic pkg
-#	"tests/integration/modules/test_cmdmod.py::CMDModuleTest::test_which_bin",
 	"tests/integration/modules/test_pip.py::PipModuleTest::test_chained_requirements__non_absolute_file_path",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/modules/test_pip.py::PipModuleTest::test_issue_2087_missing_pip",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/modules/test_pip.py::PipModuleTest::test_issue_4805_nested_requirements",  # Needs investigation: Fails only with Salt Bundle
@@ -111,97 +42,31 @@ integration = [
 	"tests/integration/modules/test_tls.py::TLSModuleTest::test_with_existing_ca_signing_csr_should_produce_valid_cert",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/states/test_x509.py::x509Test::test_crl_managed",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'X509_CRL_set1_lastUpdate'
 	"tests/integration/states/test_x509.py::x509Test::test_crl_managed_replacing_existing_crl",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'X509_CRL_set1_lastUpdate'
-#	"tests/pytests/integration/master/test_clear_funcs.py::test_clearfuncs_config",
-#	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_read",
-#	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_write",
-#	"tests/pytests/integration/netapi/rest_tornado/test_minions_api_handler.py::test_get_no_mid",
-#	"tests/pytests/integration/netapi/rest_tornado/test_root_handler.py::test_simple_local_post",
-#	"tests/pytests/integration/netapi/rest_tornado/test_root_handler.py::test_simple_local_post_only_dictionary_request",
-#	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_jid_in_ret_event",
-#	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_orchestration_with_pillar_dot_items",
-#	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_parallel_orchestrations",
-#	"tests/pytests/integration/states/test_x509_v2.py::test_certificate_managed_remote_ca_cert_change[existing_cert0]",  # Needs investigation: Fails only with Salt Bundle
 ]
 functional = [
 	"tests/pytests/functional/channel/test_server.py::test_pub_server_channel[transport(zeromq)]",
 	"tests/pytests/functional/modules/test_dockermod.py::test_docker_call",  # Needs investigation: Fails only with Salt Bundle - salt.exceptions.CommandExecutionError: /var/tmp/venv-salt-minion/bin/python.original: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.38' not found (required by /var/tmp/venv-salt-min...
 	"tests/pytests/functional/modules/test_dockermod.py::test_docker_highstate",  # Needs investigation: Fails only with Salt Bundle - salt.exceptions.CommandExecutionError: /var/tmp/venv-salt-minion/bin/python.original: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.38' not found (required by /var/tmp/venv-salt-min...
 	"tests/pytests/functional/modules/test_dockermod.py::test_docker_sls",  # Needs investigation: Fails only with Salt Bundle - salt.exceptions.CommandExecutionError: /var/tmp/venv-salt-minion/bin/python.original: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.38' not found (required by /var/tmp/venv-salt-min...
-#	"tests/pytests/functional/modules/test_sdb.py::test_setting_sdb_values_with_text_and_bytes_should_retain_data_types[bang]",
-#	"tests/pytests/functional/modules/test_sdb.py::test_setting_sdb_values_with_text_and_bytes_should_retain_data_types[expected_value2]",
-#	"tests/pytests/functional/modules/test_sdb.py::test_setting_sdb_values_with_text_and_bytes_should_retain_data_types[expected_value3]",
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_create_certificate_from_privkey[ed25519]",
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_create_certificate_from_privkey[ed448]",
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_create_certificate_from_pubkey[ed25519]",
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_create_certificate_from_pubkey[ed448]",
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_create_certificate_self_signed[ed25519]",
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_create_certificate_self_signed[ed448]",
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_create_csr[ed25519]",
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_create_csr[ed448]",
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_get_private_key_size[ed25519-None]",
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_get_private_key_size[ed448-None]",
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_get_public_key[cert_exts]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_get_public_key[csr_exts]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_get_public_key[rsa_privkey]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_get_public_key_should_not_fail_with_removed_arg",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_verify_crl",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_verify_private_key",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_verify_signature[ec]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_verify_signature[ed25519]",
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_verify_signature[ed448]",
-#	"tests/pytests/functional/modules/test_x509_v2.py::test_verify_signature[rsa]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-#	"tests/pytests/functional/modules/test_yaml.py::test_lint_pre_render",
-#	"tests/pytests/functional/modules/test_yaml.py::test_lint_yaml",
-#	"tests/pytests/functional/modules/test_yaml.py::test_yamllint_virtual",
 	"tests/pytests/functional/runners/test_winrepo.py::test_legacy_update_git_repos",
 	"tests/pytests/functional/runners/test_winrepo.py::test_update_git_repos",
 	"tests/pytests/functional/states/test_pip_state.py::test_pip_installed_name_test_mode",
 	"tests/pytests/functional/states/test_pip_state.py::test_pip_installed_pkgs_test_mode",
-#	"tests/pytests/functional/states/test_x509_v2.py::test_certificate_managed_backup[1234-False-der]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
-#	"tests/pytests/functional/states/test_x509_v2.py::test_certificate_managed_backup[1234-False-pem]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
-#	"tests/pytests/functional/states/test_x509_v2.py::test_certificate_managed_backup[1234-minion-der]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
-#	"tests/pytests/functional/states/test_x509_v2.py::test_certificate_managed_backup[1234-minion-pem]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
-#	"tests/pytests/functional/states/test_x509_v2.py::test_certificate_managed_existing_not_a_cert[1234]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
-#	"tests/pytests/functional/states/test_x509_v2.py::test_certificate_managed_signing_cert_change[existing_cert0]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
-#	"tests/pytests/functional/states/test_x509_v2.py::test_crl_managed_existing_not_a_crl[1234]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
-#	"tests/pytests/functional/states/test_x509_v2.py::test_crl_managed_existing_signing_key_change[existing_crl0]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
-#	"tests/pytests/functional/states/test_x509_v2.py::test_csr_managed_existing_not_a_csr[1234]",  # Needs investigation: Fails only with Salt Bundle - assert False is True
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_algo_change[existing_pk0]",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_existing[existing_pk2]",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_existing[existing_pk3]",  # Needs investigation: Fails only with Salt Bundle
-#	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_existing_not_a_pk[1234-False]",  # Needs investigation: Fails only with Salt Bundle - assert 'does not seem to be a private key' in 'An exception occurred in this state: Traceback (most recent call last):\n  File "/usr/lib/venv-salt-minion/lib64/python3.11/site-packages/...
-#	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_existing_not_a_pk[1234-True]",  # Needs investigation: Fails only with Salt Bundle - assert False == True
-#	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-der-ec]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-der-ed25519]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-der-ed448]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-#	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-der-rsa]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-pem-ed25519]",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-pem-ed448]",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[None-der-ed25519]",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[None-der-ed448]",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[None-pem-ed25519]",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[None-pem-ed448]",  # Needs investigation: Fails only with Salt Bundle
-#	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_passphrase_changed_not_overwrite[existing_pk0]",  # Needs investigation: Fails only with Salt Bundle - assert 'The provided passphrase cannot decrypt the private key. Pass overwrite' in 'An exception occurred in this state: Traceback (most recent call last):\n  File "/usr/lib/venv-salt-m...
-#	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_passphrase_changed_overwrite[existing_pk0]",  # Needs investigation: Fails only with Salt Bundle - assert False
-#	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_passphrase_removed_not_overwrite[existing_pk0]",  # Needs investigation: Fails only with Salt Bundle
-#	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_passphrase_removed_overwrite[existing_pk0]",  # Needs investigation: Fails only with Salt Bundle - assert False
 	"tests/pytests/functional/transport/ipc/test_pub_server_channel.py::test_issue_36469_tcp",  # Make pytest to hang on sle15sp1
 	"tests/pytests/functional/transport/ipc/test_pub_server_channel.py::test_publish_to_pubserv_ipc",  # Make pytest to hang during cleanup
 	"tests/pytests/functional/transport/tcp/test_message_client.py::test_message_client_reconnect",
 	"tests/pytests/functional/transport/zeromq/test_pub_server_channel.py::test_zeromq_filtering",  # Make pytest to hang on sle15sp1
-#	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup[LD_LIBRARY_PATH]",
-#	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup_original[LD_LIBRARY_PATH]",
-#	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup_original_passed_directly[LD_LIBRARY_PATH]",
-#	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup_passed_directly_not_removed[LD_LIBRARY_PATH]",
-#	"tests/pytests/functional/utils/pyinstaller/rthooks/test_subprocess.py::test_subprocess_popen_environ_cleanup[LD_LIBRARY_PATH]",
-#	"tests/pytests/functional/utils/pyinstaller/rthooks/test_subprocess.py::test_subprocess_popen_environ_cleanup_original[LD_LIBRARY_PATH]",
-#	"tests/pytests/functional/utils/pyinstaller/rthooks/test_subprocess.py::test_subprocess_popen_environ_cleanup_original_passed_directly[LD_LIBRARY_PATH]",
-#	"tests/pytests/functional/utils/pyinstaller/rthooks/test_subprocess.py::test_subprocess_popen_environ_cleanup_passed_directly_not_removed[LD_LIBRARY_PATH]",
-#	"tests/pytests/functional/utils/lint/test_yamllint.py::test_bad_yaml",
-#	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_config",
-#	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_good_yaml",
-#	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_has_yamllint",
-#	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_input_bytes",
         # We use python3-yamllint-1.22.1-150500.3.5.1.noarch, upstream hardcodes version 1.26.3 or greater
 	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_version",
 ]
