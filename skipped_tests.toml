@@ -145,17 +145,6 @@ functional = [
 	"tests/pytests/functional/runners/test_winrepo.py::test_update_git_repos",
 	"tests/pytests/functional/states/test_pip_state.py::test_pip_installed_name_test_mode",
 	"tests/pytests/functional/states/test_pip_state.py::test_pip_installed_pkgs_test_mode",
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_algo_change[existing_pk0]",  # Needs investigation: Fails only with Salt Bundle
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_existing[existing_pk2]",  # Needs investigation: Fails only with Salt Bundle
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed_existing[existing_pk3]",  # Needs investigation: Fails only with Salt Bundle
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-der-ed25519]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-der-ed448]",  # Needs investigation: Fails only with Salt Bundle - AttributeError: module 'lib' has no attribute 'ERR_GET_LIB'
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-pem-ed25519]",  # Needs investigation: Fails only with Salt Bundle
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[hunter1-pem-ed448]",  # Needs investigation: Fails only with Salt Bundle
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[None-der-ed25519]",  # Needs investigation: Fails only with Salt Bundle
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[None-der-ed448]",  # Needs investigation: Fails only with Salt Bundle
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[None-pem-ed25519]",  # Needs investigation: Fails only with Salt Bundle
-	"tests/pytests/functional/states/test_x509_v2.py::test_private_key_managed[None-pem-ed448]",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/functional/transport/ipc/test_pub_server_channel.py::test_issue_36469_tcp",  # Make pytest to hang on sle15sp1
 	"tests/pytests/functional/transport/ipc/test_pub_server_channel.py::test_publish_to_pubserv_ipc",  # Make pytest to hang during cleanup
 	"tests/pytests/functional/transport/tcp/test_message_client.py::test_message_client_reconnect",
