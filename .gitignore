@@ -1,0 +1,12 @@
+# IDE files
+/.vscode
+/.settings
+/.project
+/.pydevproject
+/.idea
+/.ropeproject
+*_flymake.py
+/*.iml
+*.sublime-project
+*.sublime-workspace
+*.un~
