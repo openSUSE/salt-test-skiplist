@@ -163,6 +163,7 @@ functional = [
 	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_has_yamllint",
 	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_input_bytes",
 	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_version",
+	"tests/pytests/functional/states/pkgrepo/test_debian.py::test_adding_repo_file_arch", # Seems to cause "Socket exception: Connection timed out" on Debian 11
 ]
 scenarios = [
 	"tests/pytests/scenarios/blackout/test_minion_blackout.py::test_blackout",
