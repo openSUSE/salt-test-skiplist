@@ -9,91 +9,26 @@ integration = [
 ]
 [skip]
 unit = [
-	"tests/pytests/unit/test_fileserver.py::test_file_server_serve_url_escape",  # Needs investigation: Fails only with Salt Bundle
 	"tests/pytests/unit/grains/test_core.py::test_get_server_id",
-	"tests/pytests/unit/_logging/handlers/test_deferred_stream_handler.py::test_deferred_write_on_flush",
-	"tests/pytests/unit/_logging/handlers/test_deferred_stream_handler.py::test_sync_with_handlers",
-	"tests/pytests/unit/modules/file/test_file_module.py::test_check_file_meta_binary_contents",
+	# Salt bundle currently doesn't package/ship passlib
 	"tests/pytests/unit/modules/test_linux_shadow.py::test_gen_password[md5-passlib]",
 	"tests/pytests/unit/modules/test_linux_shadow.py::test_gen_password[sha256-passlib]",
 	"tests/pytests/unit/modules/test_linux_shadow.py::test_gen_password[sha512-passlib]",
-	"tests/pytests/unit/modules/test_pip.py::test_fix4361",
-	"tests/pytests/unit/modules/test_pip.py::test_install_build_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_cached_requirements_used",
-	"tests/pytests/unit/modules/test_pip.py::test_install_download_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_download_cache_dir_arguments_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_exists_action_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_extra_args_arguments_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_extra_index_url_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_force_reinstall_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_frozen_app",
-	"tests/pytests/unit/modules/test_pip.py::test_install_global_options_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_global_proxy_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_ignore_installed_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_index_url_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_install_options_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_log_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_multiple_editable",
-	"tests/pytests/unit/modules/test_pip.py::test_install_multiple_pkgs_and_editables",
-	"tests/pytests/unit/modules/test_pip.py::test_install_multiple_requirements_arguments_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_no_deps_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_no_download_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_no_index_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_no_install_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_pre_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_proxy_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_proxy_false_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_source_app",
-	"tests/pytests/unit/modules/test_pip.py::test_install_source_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_timeout_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_upgrade_argument_in_resulting_command",
-	"tests/pytests/unit/modules/test_pip.py::test_install_venv",
-	"tests/pytests/unit/modules/test_pip.py::test_install_with_multiple_find_links",
-	"tests/pytests/unit/modules/test_pip.py::test_issue5940_install_multiple_pip_mirrors",
 	"tests/pytests/unit/modules/test_rpm_lowpkg.py::test_version_cmp_rpm_all_libraries[HAS_RPM]",
-	"tests/pytests/unit/modules/test_transactional_update.py::test_call_fails_function",
-	"tests/pytests/unit/modules/test_transactional_update.py::test_call_success_no_reboot",
-	"tests/pytests/unit/modules/test_transactional_update.py::test_call_success_parameters",
-	"tests/pytests/unit/modules/test_transactional_update.py::test_call_success_reboot",
-	"tests/pytests/unit/states/file/test_tidied.py::test_tidied_age_size_args_AND_operator_age_not_size",
-	"tests/pytests/unit/states/file/test_tidied.py::test_tidied_age_size_args_AND_operator_size_not_age",
-	"tests/pytests/unit/states/test_pkgrepo.py::test_migrated_wrong_method",
-	"tests/pytests/unit/test_fileserver.py::test_file_server_url_escape",  # Needs investigation: Fails only with Salt Bundle
-	"tests/pytests/unit/utils/test_gitfs.py::test_full_id_pygit2",
-	"tests/pytests/unit/utils/test_msgpack.py::test_load_encoding",
+	# Requires Python 3.7. Non-bundle client uses Python 3.6, which doesn't have blowfish algorithm
 	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[blowfish-expected2]",
-	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[crypt-expected4]",
-	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[md5-expected3]",
-	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[sha256-expected1]",
-	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[sha512-expected0]",
-	"tests/pytests/unit/utils/test_vt.py::test_log_sanitize[echo]",
-	"tests/pytests/unit/utils/test_vt.py::test_log_sanitize[ls]",
 	"tests/unit/cli/test_support.py::ProfileIntegrityTestCase::test_jobs_trace_template_profile",
 	"tests/unit/cli/test_support.py::ProfileIntegrityTestCase::test_non_template_profiles_parseable",
 	"tests/unit/cli/test_support.py::ProfileIntegrityTestCase::test_users_template_profile",
 	"tests/unit/modules/test_dpkg_lowpkg.py::DpkgTestCase::test_info",
-	"tests/unit/test_config.py::APIConfigTestCase::test_api_config_log_file_values",
-	"tests/unit/test_config.py::APIConfigTestCase::test_api_config_prepend_root_dirs_return",
-	"tests/unit/test_config.py::ConfigTestCase::test_load_minion_config_from_environ_var",
-	"tests/unit/test_config.py::SampleConfTest::test_conf_master_sample_is_commented",
+	# Upstream removed vendored Tornado in https://github.com/saltstack/salt/commit/4baea1a97be0389fabe5307d084579134a1f9b7a
 	"tests/unit/transport/test_ipc.py::IPCMessagePubSubCase::test_async_reading_streamclosederror",
 	"tests/unit/transport/test_ipc.py::IPCMessagePubSubCase::test_multi_client_reading",
-	"tests/unit/utils/test_sdb.py::SdbTestCase::test_sqlite_get_found",
-	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_evaluate",
-	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_evaluate_condition",
-	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_sanity",
-	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_variable",
-	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_genshi_variable_replace",
-	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_mako_evaluate",
-	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_mako_evaluate_multi",
-	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_mako_sanity",
-	"tests/unit/utils/test_templates.py::RenderTestCase::test_render_mako_variable",
 ]
 integration = [
 	"tests/integration/cli/test_custom_module.py::SSHCustomModuleTest::test_ssh_custom_module",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/cli/test_custom_module.py::SSHCustomModuleTest::test_ssh_sls_with_custom_module",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/loader/test_ext_modules.py",  # Make pytest to stuck in sle15sp1 classic pkg
-	"tests/integration/modules/test_cmdmod.py::CMDModuleTest::test_which_bin",
 	"tests/integration/modules/test_pip.py::PipModuleTest::test_chained_requirements__non_absolute_file_path",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/modules/test_pip.py::PipModuleTest::test_issue_2087_missing_pip",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/modules/test_pip.py::PipModuleTest::test_issue_4805_nested_requirements",  # Needs investigation: Fails only with Salt Bundle
@@ -120,27 +55,12 @@ integration = [
 	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_root_and_mountpoint_parameters",
 	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_root_parameter",
 	"tests/integration/pillar/test_git_pillar.py::TestPygit2SSH::test_single_source",
-	"tests/pytests/integration/master/test_clear_funcs.py::test_clearfuncs_config",
-	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_read",
-	"tests/pytests/integration/master/test_clear_funcs.py::test_fileroots_write",
-	"tests/pytests/integration/netapi/rest_tornado/test_minions_api_handler.py::test_get_no_mid",
-	"tests/pytests/integration/netapi/rest_tornado/test_root_handler.py::test_simple_local_post",
-	"tests/pytests/integration/netapi/rest_tornado/test_root_handler.py::test_simple_local_post_only_dictionary_request",
-	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_jid_in_ret_event",
-	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_orchestration_with_pillar_dot_items",
-	"tests/pytests/integration/runners/state/orchestrate/test_events.py::test_parallel_orchestrations",
 ]
 functional = [
 	"tests/pytests/functional/channel/test_server.py::test_pub_server_channel[transport(zeromq)]",
 	"tests/pytests/functional/modules/test_dockermod.py::test_docker_call",  # Needs investigation: Fails only with Salt Bundle - salt.exceptions.CommandExecutionError: /var/tmp/venv-salt-minion/bin/python.original: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.38' not found (required by /var/tmp/venv-salt-min...
 	"tests/pytests/functional/modules/test_dockermod.py::test_docker_highstate",  # Needs investigation: Fails only with Salt Bundle - salt.exceptions.CommandExecutionError: /var/tmp/venv-salt-minion/bin/python.original: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.38' not found (required by /var/tmp/venv-salt-min...
 	"tests/pytests/functional/modules/test_dockermod.py::test_docker_sls",  # Needs investigation: Fails only with Salt Bundle - salt.exceptions.CommandExecutionError: /var/tmp/venv-salt-minion/bin/python.original: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.38' not found (required by /var/tmp/venv-salt-min...
-	"tests/pytests/functional/modules/test_sdb.py::test_setting_sdb_values_with_text_and_bytes_should_retain_data_types[bang]",
-	"tests/pytests/functional/modules/test_sdb.py::test_setting_sdb_values_with_text_and_bytes_should_retain_data_types[expected_value2]",
-	"tests/pytests/functional/modules/test_sdb.py::test_setting_sdb_values_with_text_and_bytes_should_retain_data_types[expected_value3]",
-	"tests/pytests/functional/modules/test_yaml.py::test_lint_pre_render",
-	"tests/pytests/functional/modules/test_yaml.py::test_lint_yaml",
-	"tests/pytests/functional/modules/test_yaml.py::test_yamllint_virtual",
 	"tests/pytests/functional/runners/test_winrepo.py::test_legacy_update_git_repos",
 	"tests/pytests/functional/runners/test_winrepo.py::test_update_git_repos",
 	"tests/pytests/functional/states/test_pip_state.py::test_pip_installed_name_test_mode",
@@ -149,19 +69,7 @@ functional = [
 	"tests/pytests/functional/transport/ipc/test_pub_server_channel.py::test_publish_to_pubserv_ipc",  # Make pytest to hang during cleanup
 	"tests/pytests/functional/transport/tcp/test_message_client.py::test_message_client_reconnect",
 	"tests/pytests/functional/transport/zeromq/test_pub_server_channel.py::test_zeromq_filtering",  # Make pytest to hang on sle15sp1
-	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup[LD_LIBRARY_PATH]",
-	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup_original[LD_LIBRARY_PATH]",
-	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup_original_passed_directly[LD_LIBRARY_PATH]",
-	"tests/pytests/functional/utils/pyinstaller/rthooks/test_salt_utils_vt_terminal.py::test_vt_terminal_environ_cleanup_passed_directly_not_removed[LD_LIBRARY_PATH]",
-	"tests/pytests/functional/utils/pyinstaller/rthooks/test_subprocess.py::test_subprocess_popen_environ_cleanup[LD_LIBRARY_PATH]",
-	"tests/pytests/functional/utils/pyinstaller/rthooks/test_subprocess.py::test_subprocess_popen_environ_cleanup_original[LD_LIBRARY_PATH]",
-	"tests/pytests/functional/utils/pyinstaller/rthooks/test_subprocess.py::test_subprocess_popen_environ_cleanup_original_passed_directly[LD_LIBRARY_PATH]",
-	"tests/pytests/functional/utils/pyinstaller/rthooks/test_subprocess.py::test_subprocess_popen_environ_cleanup_passed_directly_not_removed[LD_LIBRARY_PATH]",
-	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_bad_yaml",
-	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_config",
-	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_good_yaml",
-	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_has_yamllint",
-	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_input_bytes",
+	# We use python3-yamllint-1.22.1-150500.3.5.1.noarch, upstream hardcodes version 1.26.3 or greater
 	"tests/pytests/functional/utils/yamllint/test_yamllint.py::test_version",
 	"tests/pytests/functional/states/pkgrepo/test_debian.py::test_adding_repo_file_arch", # Seems to cause "Socket exception: Connection timed out" on Debian 11
 ]
