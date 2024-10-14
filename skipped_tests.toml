@@ -27,6 +27,7 @@ unit = [
 ]
 integration = [
 	"tests/integration/cli/test_custom_module.py::SSHCustomModuleTest::test_ssh_custom_module",  # Needs investigation: Fails only with Salt Bundle
+	"tests/integration/cli/test_custom_module.py::SSHCustomModuleTest::test_ssh_regular_module", # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/cli/test_custom_module.py::SSHCustomModuleTest::test_ssh_sls_with_custom_module",  # Needs investigation: Fails only with Salt Bundle
 	"tests/integration/loader/test_ext_modules.py",  # Make pytest to stuck in sle15sp1 classic pkg
 	"tests/integration/modules/test_pip.py::PipModuleTest::test_chained_requirements__non_absolute_file_path",  # Needs investigation: Fails only with Salt Bundle
@@ -64,6 +65,11 @@ functional = [
 	"tests/pytests/functional/runners/test_winrepo.py::test_legacy_update_git_repos",
 	"tests/pytests/functional/runners/test_winrepo.py::test_update_git_repos",
 	"tests/pytests/functional/states/test_pip_state.py::test_pip_installed_name_test_mode",
+
+	"tests/pytests/functional/modules/test_x509_v2.py::test_create_private_key[ed25519]",  # Needs investigation: Fails only with Salt Bundle - cryptography.exceptions.UnsupportedAlgorithm: ed25519 is not supported by t...
+	"tests/pytests/functional/modules/test_x509_v2.py::test_create_private_key[ed448]",  # Needs investigation: Fails only with Salt Bundle - cryptography.exceptions.UnsupportedAlgorithm: ed448 is not supported by thi...
+	"tests/pytests/functional/modules/test_x509_v2.py::test_create_private_key_with_passphrase[ed25519]",  # Needs investigation: Fails only with Salt Bundle - cryptography.exceptions.UnsupportedAlgorithm: ed25519 is not supported by t...
+	"tests/pytests/functional/modules/test_x509_v2.py::test_create_private_key_with_passphrase[ed448]",  # Needs investigation: Fails only with Salt Bundle -  cryptography.exceptions.UnsupportedAlgorithm: ed448 is not supported by thi...
 	"tests/pytests/functional/states/test_pip_state.py::test_pip_installed_pkgs_test_mode",
 	"tests/pytests/functional/transport/ipc/test_pub_server_channel.py::test_issue_36469_tcp",  # Make pytest to hang on sle15sp1
 	"tests/pytests/functional/transport/ipc/test_pub_server_channel.py::test_publish_to_pubserv_ipc",  # Make pytest to hang during cleanup
