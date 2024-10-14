@@ -10,10 +10,6 @@ integration = [
 [skip]
 unit = [
 	"tests/pytests/unit/grains/test_core.py::test_get_server_id",
-	# Salt bundle currently doesn't package/ship passlib
-	"tests/pytests/unit/modules/test_linux_shadow.py::test_gen_password[md5-passlib]",
-	"tests/pytests/unit/modules/test_linux_shadow.py::test_gen_password[sha256-passlib]",
-	"tests/pytests/unit/modules/test_linux_shadow.py::test_gen_password[sha512-passlib]",
 	"tests/pytests/unit/modules/test_rpm_lowpkg.py::test_version_cmp_rpm_all_libraries[HAS_RPM]",
 	# Requires Python 3.7. Non-bundle client uses Python 3.6, which doesn't have blowfish algorithm
 	"tests/pytests/unit/utils/test_pycrypto.py::test_gen_hash_crypt[blowfish-expected2]",
