@@ -6,6 +6,8 @@ unit = [
 	"tests/unit/utils/test_boto3mod.py",
 ]
 integration = [
+	"tests/pytests/integration/cli/test_salt_deltaproxy.py",
+	"tests/pytests/integration/proxy/test_deltaproxy.py",
 ]
 [skip]
 unit = [
